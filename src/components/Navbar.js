@@ -32,8 +32,8 @@ function Navbar() {
       <div className="navbar">
         <div className="navbar-container container">
           <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-            <MdFingerprint className="navbar-icon" />
-            CINEMAH
+           
+            C I N E M A H
           </Link>
           <div className="menu-icon" onClick={handleClick}>
             {click ? <FaTimes /> : <FaBars />}
@@ -46,29 +46,33 @@ function Navbar() {
             </li>
             <li className="nav-item">
                 <Link to='/Home2' className='nav-links'onClick={closeMobileMenu}>
-                    Home2
+                    Movie
                 </Link>
             </li>
             <li className="nav-item">
                 <Link to='/Home3' className='nav-links'onClick={closeMobileMenu}>
-                    Home3
+                    History
+                </Link>
+            </li>
+            <li className="nav-item">
+                <Link to='/Home3' className='nav-links'onClick={closeMobileMenu}>
+                    Dev
                 </Link>
             </li>
             <li className='nav-btn'>
                 {button ?
                     (
-                        <Link to='/sign-up'className='btn-link'>
+                        <Link to='/Log-out'className='btn-link'>
                             <Button buttonStyle='btn--outline'>
-                                SIGN UP
+                                Log out
                             </Button>
                         </Link>
                     ):
                     (
-                        <Link to='/sign-up' className='btn-link'onClick={closeMobileMenu}>
+                        <Link to='/Log-out' className='btn-link'onClick={closeMobileMenu}>
                             <Button buttonStyle='btn--outline'
-                            buttonSize='btn--moblie'>
-                                
-                                SIGN UP
+                            buttonSize='btn--moblie'>                                
+                                Log out
                             </Button>
                         </Link>
                     )
