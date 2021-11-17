@@ -1,64 +1,69 @@
-import React from 'react';
+import { Carousel } from 'react-carousel-minimal';
 import './Herosection.css';
-import { Button } from './Button';
-import { Link } from 'react-router-dom';
+import img from "./../assets/banner/4.jpg";
+import img1 from "./../assets/banner/2.jpg";
+// import img2 from "./image/3.jpg";
 
-function Herosection({
-  lightBg,
-  topLine,
-  lightText,
-  lightTextDesc,
-  headline,
-  description,
-  buttonLabel,
-  img,
-  alt,
-  imgStart
-}) {
+function Herosection() {
+ const data = [
+    {
+      image: "image/Mask Group.png",
+      // caption: "San Francisco"
+          
+    },
+    {
+      image: "image/1.jpg",
+      // caption: "Scotland"
+    },
+    {
+      image: "image/2.jpg",
+      // caption: "Darjeeling"
+    },
+    {
+      image: "image/3.jpg",
+      // caption: "San Francisco"
+    }
+   
+  ];
+
+  // const captionStyle = {
+  //   fontSize: '2em',
+  //   fontWeight: 'bold',
+  // }  
   return (
     <>
-      <div
-        className={lightBg ? 'home__hero-section' : 'home__hero-section darkBg'}
-      >
-        <div className='container'>
-          <div
-            className='row home__hero-row'
+      <div className={'home__hero-section darkBg'}>
+      <div style={{ textAlign: "center" }}>       
+        <div style={{
+          padding: "0 20px"
+        }}>
+          <Carousel
+        
+            data={data}
+            time={2000}
+            width="850px"
+            height="500px"          
+            // captionStyle={captionStyle}
+            radius="10px"           
+            captionPosition="bottom"
+            automatic={true}
+            dots={true}
+            pauseIconColor="white"
+            pauseIconSize="40px"
+            slideBackgroundColor="darkgrey"
+            slideImageFit="cover"           
             style={{
-              display: 'flex',
-              flexDirection: imgStart === 'start' ? 'row-reverse' : 'row'
+              textAlign: "center",
+              maxWidth: "850px",
+              maxHeight: "500px",
+              margin: "40px auto",
             }}
-          >
-            <div className='col'>
-              <div className='home__hero-text-wrapper'>
-                <div className='top-line'>{topLine}</div>
-                <h1 className={lightText ? 'heading' : 'heading dark'}>
-                  {headline}
-                </h1>
-                <p
-                  className={
-                    lightTextDesc
-                      ? 'home__hero-subtitle'
-                      : 'home__hero-subtitle dark'
-                  }
-                >
-                  {description}
-                </p>
-                <Link to='/sign-up'>
-                  <Button buttonSize='btn--wide' buttonColor='blue'>
-                    {buttonLabel}
-                  </Button>
-                </Link>
-              </div>
-            </div>
-            <div className='col'>
-              <div className='home__hero-img-wrapper'>
-                <img src={img} alt={alt} className='home__hero-img' />
-              </div>
-            </div>
-          </div>
+          />
         </div>
       </div>
+    </div>
     </>
+
   );
 }
 

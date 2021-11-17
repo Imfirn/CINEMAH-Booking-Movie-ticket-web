@@ -1,0 +1,10 @@
+.home__hero-section{
+    color: aliceblue;
+    padding:20px 0;
+}
+
+.dark{
+    color:#111138;
+    z-index: -1;
+}
+

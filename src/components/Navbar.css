@@ -1,6 +1,12 @@
 .navbar {
-  background: black;
-  height: 80px;
+  background: radial-gradient(
+    97.36% 31.34% at 50% -1.33%,
+    #c370e8 4.54%,
+    #642cc7 22.45%,
+    #0e094f 68.75%,
+    #111138 97.92%
+  );
+  height: 150px;
   display: flex;
   justify-content: center;
   align-items: center; 
@@ -51,9 +57,13 @@
   list-style: none;
   text-align: center;
   justify-content: end;
+
 }
 .nav-btn{
   position: relative;
+  background-color: #fff;
+  height: 0rem;
+  border-radius: 15px;
   top:-5vh;
 }
 .nav-item {
@@ -85,7 +95,10 @@
   display: none;
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 860px) {
+  .navbar{
+    height: 100px;
+  }
   .NavbarItems {
     position: relative;
   }
@@ -104,7 +117,7 @@
 
   .nav-menu.active {
     /* nav สามขีด */
-    /* background:#f00946; */
+    background:#111138;
     left: 0;
     opacity: 1;
     transition: all 0.6s ease;
@@ -161,7 +174,8 @@
     align-items: center;
     position: relative;
     top: 0em;
-    width: 100%;
+    width: 50%;
     height: 120px;
+    background-color: transparent;
   }
 }
