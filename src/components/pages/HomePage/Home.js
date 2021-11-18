@@ -1,12 +1,13 @@
 import React from 'react'
-import Banner from '../../Banner'
 import Herosection from '../../Herosection'
+// import Banner from '../../Banner'
 // import{homeObjOne}from'./Data'
 
 function Home() {
     return (
         <>
-        <Banner/>         
+        {/* <Banner/>   */}
+        <Herosection/>      
         </>
     )
 }

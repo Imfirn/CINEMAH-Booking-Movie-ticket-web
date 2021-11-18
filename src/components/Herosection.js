@@ -1,8 +1,7 @@
 import { Carousel } from 'react-carousel-minimal';
 import './Herosection.css';
-import img from "./../assets/banner/4.jpg";
-import img1 from "./../assets/banner/2.jpg";
-// import img2 from "./image/3.jpg";
+
+
 
 function Herosection() {
  const data = [
@@ -26,10 +25,7 @@ function Herosection() {
    
   ];
 
-  // const captionStyle = {
-  //   fontSize: '2em',
-  //   fontWeight: 'bold',
-  // }  
+  
   return (
     <>
       <div className={'home__hero-section darkBg'}>
@@ -41,7 +37,7 @@ function Herosection() {
         
             data={data}
             time={2000}
-            width="850px"
+            width="1200px"
             height="500px"          
             // captionStyle={captionStyle}
             radius="10px"           
@@ -54,7 +50,7 @@ function Herosection() {
             slideImageFit="cover"           
             style={{
               textAlign: "center",
-              maxWidth: "850px",
+              maxWidth: "1200px",
               maxHeight: "500px",
               margin: "40px auto",
             }}
