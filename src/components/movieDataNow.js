@@ -1,10 +1,12 @@
+
 const MovieimgNow = [
-  {
+  { 
     nm:"Tom and jerry",
     img: require("./../assets/nowPic/n2.jpg").default,
-    time:"140"
+    time:"140",
+    description:"kkkkkkkkkkkkkkkkkk"
   },
- {
+ {  
     nm:"1 Remember",
     img: require("./../assets/nowPic/n1.jpg").default,
     time:"140"

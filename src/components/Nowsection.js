@@ -22,10 +22,10 @@ function Nowsection() {
             <h1 className='txt1'>Now Showing</h1>
            
             <Carousel breakPoints={breakPoint} pagination={false}>
-            {       MovieimgNow && MovieimgNow.map((item)=>         
-
-                           <Card number={item.nm} img={item.img} time={item.time} btn='True'/> 
-                        
+            {       MovieimgNow && MovieimgNow.map((item,index)=>         
+                        <div key={index}>
+                           <Card number={item.nm} img={item.img}  btn='True'/> 
+                           </div>
                     )
                 }
                

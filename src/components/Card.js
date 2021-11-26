@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import'./card.css'
+import MovieimgNow from"./movieDataNow"
 
 const Card =({number,img,time,btn=false,rD}) =>
 <div className="card">
@@ -15,7 +16,7 @@ const Card =({number,img,time,btn=false,rD}) =>
     </div> 
     <div className="ticket">
     {btn ?(
-    <Link to={"/Buyticket"} className='buy-link'>
+    <Link to={`/Buyticket/${number}`} className='buy-link'>
     <button className="btn-ticket">
         Get tickets
         </button>
