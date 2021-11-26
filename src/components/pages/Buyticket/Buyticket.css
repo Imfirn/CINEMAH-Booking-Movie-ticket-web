@@ -44,7 +44,7 @@
 }
 @media screen and (max-width:600px) {
     .poster-wrapper{
-        padding-bottom: 30px;
+        padding-bottom: 10px;
         
     }
     .name{
