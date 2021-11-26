@@ -22,7 +22,7 @@ const MovieimgNow = [
     time:"140"
   },
   {
-    nm:"1 Remember",
+    nm:" ",
     img: require("./../assets/nowPic/n5.jpg").default,
     time:"140"
   },

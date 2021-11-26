@@ -24,7 +24,7 @@ function Nowsection() {
             <Carousel breakPoints={breakPoint} pagination={false}>
             {       MovieimgNow && MovieimgNow.map((item,index)=>         
                         <div key={index}>
-                           <Card number={item.nm} img={item.img}  btn='True'/> 
+                           <Card number={item.nm} time={item.time} img={item.img}  btn='True'/> 
                            </div>
                     )
                 }

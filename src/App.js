@@ -3,8 +3,8 @@ import './App.css';
 import Navbar from './components/Navbar';
 import {BrowserRouter as Router,Route,Routes} from'react-router-dom';
 import Home from './components/pages/HomePage/Home';
-import Buyticket from './components/pages/Buyticket/Buyticket';
 import MovieimgNow from './components/movieDataNow';
+import Buyticket from './components/pages/Buyticket/Buyticket';
 
 function App() {
   return (
