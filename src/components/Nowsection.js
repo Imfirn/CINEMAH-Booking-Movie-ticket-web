@@ -12,7 +12,7 @@ function Nowsection() {
     return new Promise((res) => setTimeout(res, ms));
   };
   useEffect(() => {
-    axios.get("http://127.0.0.1:8000/api/Detail/").then((res) => {
+    axios.get("http://127.0.0.1:8000/api/MovieLH/").then((res) => {
       setNameMovie(res.data);
     });
   }, []);

@@ -8,7 +8,8 @@ h1{
 .movieName{
     position: relative;
     top: 10px;
-    width: 60%;
+    width: 200px;
+    height: 40px;
     font-size: 1rem;
     font-weight: bold;
     color: #b465ff;
