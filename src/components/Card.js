@@ -7,7 +7,7 @@ const Card =({number,img,time,btn=false,rD}) =>
 <div className="card">
     
     <div className="test">
-    <img className="pic" src={img} alt=""/>  
+    <img className="pic" src={`/image/nowPic/${number}/${img}.jpg`} alt=""/>  
     <div className="movieName">
         {number}
     </div>  

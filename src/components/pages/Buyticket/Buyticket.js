@@ -12,7 +12,7 @@ const Buyticket = ({ data }) => {
         <div className="container">
         <div className="Movie-section">
           {data
-            .filter((item) => item.nm == id)
+            .filter((item) => item.Name == id)
             .map((item, index) => (
               <div
                 className="movie-detail-row"
@@ -26,9 +26,10 @@ const Buyticket = ({ data }) => {
 
                 <div className="col">
                   <div className="movie-name">
-                    <h1 className="name">{item.nm}</h1>
+                    <h1 className="name">{item.Name}</h1>
                     <div className="movie-date">
                       <p>RELEASE DATE</p>
+                      <p>{item.FullDate}</p>
                     </div>
                     <div
                       className="time"
@@ -37,7 +38,7 @@ const Buyticket = ({ data }) => {
                       }}
                     >
                       <BiTimeFive size="1.5em" />
-                      <p className="timeData"> {item.time}</p>
+                      <p className="timeData"> {item.Time}</p>
                     </div>
                   </div>
                 </div>
