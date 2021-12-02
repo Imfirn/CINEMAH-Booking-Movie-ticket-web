@@ -38,7 +38,7 @@ function Nowsection() {
                 <Card
                   number={item.Name}
                   time={item.Time}
-                  img="n2"
+                  img={item.Date}
                   btn="True"
                 />
               </div>

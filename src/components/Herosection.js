@@ -38,8 +38,8 @@ function Herosection() {
             data={data}
             time={2000}
             width="1200px"
-            height="500px"          
-            // captionStyle={captionStyle}
+            height="500px"        
+            
             radius="10px"           
             captionPosition="bottom"
             automatic={true}

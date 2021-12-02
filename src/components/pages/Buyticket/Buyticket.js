@@ -20,7 +20,7 @@ const Buyticket = ({ data }) => {
               >
                 <div className="col">
                   <div className="poster-wrapper">
-                    <img className="movie-poster" src={item.img} alt="" />
+                    <img className="movie-poster" src={`/image/nowPic/Movie/${item.Name}/${item.Date}_1.jpg`} alt="" />
                   </div>
                 </div>
 

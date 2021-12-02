@@ -3,20 +3,20 @@ import { Link } from "react-router-dom";
 import'./card.css'
 import MovieimgNow from"./movieDataNow"
 
-const Card =({number,img,time,btn=false,rD}) =>
+const Card =({number: name,img,time,btn=false,rD}) =>
 <div className="card">
     
     <div className="test">
-    <img className="pic" src={`/image/nowPic/${number}/${img}.jpg`} alt=""/>  
+    <img className="pic" src={`/image/nowPic/Movie/${name}/${img}_1.jpg`} alt=""/>  
     <div className="movieName">
-        {number}
+        {name}
     </div>  
     <div className="movieTime">
         {time} min
     </div> 
     <div className="ticket">
     {btn ?(
-    <Link to={`/Buyticket/${number}`} className='buy-link'>
+    <Link to={`/Buyticket/${name}`} className='buy-link'>
     <button className="btn-ticket">
         Get tickets
         </button>
