@@ -1,0 +1,14 @@
+.Wrap-mov{
+    align-items: center;
+    padding-left: 1.5rem;
+}
+.allMovie{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 2rem;
+    /* padding: 0 20px; */
+    /* justify-content: space-around;  */
+    
+ 
+
+}

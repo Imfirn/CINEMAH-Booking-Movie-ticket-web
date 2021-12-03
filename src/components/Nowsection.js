@@ -3,7 +3,6 @@ import Carousel from "react-elastic-carousel";
 import Card from "./Card";
 import "./Nowsection.css";
 import axios from "axios";
-// import img1 from "./../assets/nowPic/n1.jpg"
 import MovieimgNow from "./movieDataNow";
 
 function Nowsection() {
@@ -48,6 +47,7 @@ function Nowsection() {
       <div className="nextMov">
         <div className="curr">
           <h1 className="txt1">Coming Soon</h1>
+        
           <Carousel breakPoints={breakPoint} pagination={false}>
             {MovieimgNow &&
               MovieimgNow.map((item) => (

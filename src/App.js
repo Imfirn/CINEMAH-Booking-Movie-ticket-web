@@ -5,6 +5,7 @@ import {BrowserRouter as Router,Route,Routes} from'react-router-dom';
 import Home from './components/pages/HomePage/Home';
 import MovieimgNow from './components/movieDataNow';
 import Buyticket from './components/pages/Buyticket/Buyticket';
+import Movie from './components/pages/AllMovie/Movie';
 import axios from "axios";
 
 function App() {
@@ -24,7 +25,8 @@ function App() {
       <Navbar />
       <Routes>      
         <Route path="/" element={<Home />} />
-        <Route path="/Buyticket/:id" element={<Buyticket data={nameMovie}/>}/>      
+        <Route path="/Buyticket/:id" element={<Buyticket data={nameMovie}/>}/>  
+        <Route path="/movie" element={<Movie />} />    
       </Routes>      
     </Router>
     </div>
