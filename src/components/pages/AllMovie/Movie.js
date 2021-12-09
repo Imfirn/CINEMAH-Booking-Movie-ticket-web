@@ -41,7 +41,7 @@ function Movie() {
               pushData(e.target.value);
               await timeout(100);
               if ((e.target.value == "")) {
-                axios
+                axios              
                   .get("http://127.0.0.1:8000/api/Detail/")
                   .then((res) => {
                     setNameMovie(res.data);
