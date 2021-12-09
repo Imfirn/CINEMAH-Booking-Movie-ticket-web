@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import "./../../../App.css";
 import "./../Buyticket/Buyticket.css";
 import { BiTimeFive } from "react-icons/bi";
+import ReactPlayer from 'react-player';
 
 const Buyticket = ({ data }) => {
   const { id } = useParams();
@@ -42,6 +43,18 @@ const Buyticket = ({ data }) => {
                     </div>
                   </div>
                 </div>
+
+                <div className="col-video">
+                  <div className="video-wrapper">                    
+                    <ReactPlayer 
+                    className="vdo-movie"                   
+                    url={item.linkTrailer} 
+                    width="100%"
+                    height="100%"
+                    />
+                  </div>
+                </div>
+
               </div>
             ))}
         </div>
