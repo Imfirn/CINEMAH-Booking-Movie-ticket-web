@@ -1,8 +1,17 @@
 .mem-pic {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+.Namecard{
+    margin-left: 10px;
+}
+/* .mem-pic:hover {
     width: 300px;
     height: 300px;
     object-fit: cover;
-}
+    transition: 0.3ms;
+} */
 /* 
 .mem-id {
     

@@ -1,7 +1,7 @@
 import React from "react";
 import './NameCard.css'
 
-const NameCard = ({picMem, name, d}) => {
+const NameCard = ({picMem, name, id}) => {
   return (
     <div className="Namecard">
       <img
@@ -10,7 +10,7 @@ const NameCard = ({picMem, name, d}) => {
         alt=""
       />
       <div className="mem-id">
-          {d}
+          {id}
           </div>
       <div className="mem-name">
           {name} 

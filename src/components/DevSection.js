@@ -1,25 +1,47 @@
 import React from "react";
 import "../App";
 import NameCard from "./NameCard";
-import NameMember from"./memberData.js";
+import NameMember from "./memberData.js";
+import "./DevSection.css";
 function DevSection() {
   return (
     <div className={"home__hero-section darkBg"}>
-        <div className="container">
       <div style={{ textAlign: "center" }}>
-        
-        {NameMember &&
-            NameMember.map((item, index) => (
-              <div key={index}>
-                <NameCard
-                name={item.name}
-                picMem={item.pic}
-                d={item.id}
-                />
-              </div>
-            ))}
-         
-         </div>
+        <div className="container">
+          <div className="wrap-front">
+            <div className="wrapper">
+            <NameCard
+              name={NameMember.front_1.name}
+              picMem={NameMember.front_1.pic}
+              id={NameMember.front_1.id}
+            />
+            <NameCard
+              name={NameMember.front_2.name}
+              picMem={NameMember.front_2.pic}
+              id={NameMember.front_2.id}
+            />
+            <NameCard
+              name={NameMember.front_3.name}
+              picMem={NameMember.front_3.pic}
+              id={NameMember.front_3.id}
+            />
+            </div>
+          </div>
+          <div className="wrap-back">
+          <div className="wrapper">
+            <NameCard
+              name={NameMember.back_1.name}
+              picMem={NameMember.back_1.pic}
+              id={NameMember.back_1.id}
+            />
+            <NameCard
+              name={NameMember.back_2.name}
+              picMem={NameMember.back_2.pic}
+              id={NameMember.back_2.id}
+            />
+          </div>
+          </div>
+        </div>
       </div>
     </div>
   );
