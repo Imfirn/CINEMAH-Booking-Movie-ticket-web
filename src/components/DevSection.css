@@ -4,17 +4,39 @@
     /* margin-bottom: 250px; */
     /* background-color: aqua; */
 }
-.txt2{
-   
+.dev-back{
+    display: flex;
     position: absolute;
-    margin-bottom: 36.5vh;
-    margin-left: 3vw;
+    margin-bottom: 38vh;
+    margin-left: 1.5vw;
+
+}
+.dev-front{
+    display: flex;
+    position: absolute;
+    margin-bottom: 38vh;
+    margin-left: 6.5vw;
+
+}
+.logo-front{
+    height: 45px;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.logo-back{
+    height: 45px;
+    margin-right: 10px;
+    object-fit: cover;
+}
+.txt2{  
+
     font-size: 2.7rem;
 }
 .txt{
-    position: absolute;
+    /* position: absolute;
     margin-top: 25vh;
-    margin-left: 10vw;
+    margin-left: 10vw; */
     font-size: 2.7rem;
 }
 .wrapper{
