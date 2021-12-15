@@ -7,7 +7,12 @@ function DevSection() {
   return (
     <div className={"home__hero-section darkBg"}>
       <div style={{ textAlign: "center" }}>
+          
         <div className="container">
+          <div className="pack">
+            <div className="txt">
+            Frontend Developer
+            </div>
           <div className="wrap-front">
             <div className="wrapper">
             <NameCard
@@ -27,7 +32,12 @@ function DevSection() {
             />
             </div>
           </div>
+          </div>
+          
           <div className="wrap-back">
+          <div className="txt2">
+            Frontend Developer
+            </div>
           <div className="wrapper">
             <NameCard
               name={NameMember.back_1.name}
