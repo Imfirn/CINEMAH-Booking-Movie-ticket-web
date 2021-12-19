@@ -34,8 +34,10 @@ function Movie() {
       <div className="Wrap-mov">
         <div className="Wrap-serach">
           <input
+            className="ser"
             id="outlined-basic"
             label="Search"
+            placeholder="Enter Movie name"
             variant="outlined"
             onChange={async (e) => {
               pushData(e.target.value);

@@ -2,11 +2,16 @@
 .movie-detail-row{
     margin-top: 10px;
     display: flex;
+    /* margin-left: auto;
+    margin-right: auto;       */
+    
+    
+    /* background-color: aquamarine; */
 }
 .col{
     margin-bottom: 15px;    
     padding-right: 15px;
-    padding-left: 15px;   
+    padding-left: 30px;   
     max-width: 50%; 
     /* background-color: aqua; */
     
@@ -16,7 +21,7 @@
     margin-left: 15px;
     padding-right: 15px;
     padding-left: 40px; 
-    width: 55%; 
+    width: 600px; 
     max-width: 60%; 
     /* background-color: rgb(208, 255, 0); */
     

@@ -15,6 +15,7 @@ const Buyticket = ({ data }) => {
           {data
             .filter((item) => item.Name == id)
             .map((item, index) => (
+              <>
               <div
                 className="movie-detail-row"
                
@@ -54,9 +55,15 @@ const Buyticket = ({ data }) => {
                     />
                   </div>
                 </div>
-
+               
               </div>
+              <div className="information" >
+                <h3>INFORMATIONS</h3>
+                <p>{item.Description}</p>
+                </div>
+              </>
             ))}
+             
         </div>
       </div>
       </div>
