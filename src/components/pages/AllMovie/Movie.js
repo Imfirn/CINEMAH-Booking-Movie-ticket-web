@@ -62,6 +62,7 @@ function Movie() {
           {nameMovie &&
             nameMovie.map((item, index) => (
               <div key={index}>
+                
                 <Grid
                   name={item.Name}
                   img={`/image/nowPic/Movie/${item.Name}/${item.Date}_1.jpg`}

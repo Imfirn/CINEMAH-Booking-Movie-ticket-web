@@ -7,6 +7,7 @@ import Buyticket from './components/pages/Buyticket/Buyticket';
 import Movie from './components/pages/AllMovie/Movie';
 import axios from "axios";
 import DevPage from './components/pages/Dev/DevPage';
+import Info from './components/pages/Information/Info';
 
 function App() {
   const [nameMovie, setNameMovie] = useState(null);
@@ -27,6 +28,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/Buyticket/:id" element={<Buyticket data={nameMovie}/>}/>  
         <Route path="/movie" element={<Movie />} />
+        <Route path="/movie/:id" element={<Info data={nameMovie} />} />
         <Route path="/dev" element={<DevPage />} />    
       </Routes>      
     </Router>

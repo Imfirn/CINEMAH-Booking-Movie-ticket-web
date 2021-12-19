@@ -9,6 +9,9 @@
 
 .mov-card{
     margin-bottom: 10px;
+    width: 180px;
+    /* height: 250px; */
+    /* background-color: aliceblue; */
 }
 .mov-name{
     margin-top: 10px;

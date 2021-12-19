@@ -1,5 +1,5 @@
 import React from "react";
-import "../App";
+import "../App.css";
 import NameCard from "./NameCard";
 import NameMember from "./memberData.js";
 import "./DevSection.css";
@@ -7,7 +7,7 @@ function DevSection() {
   return (
     <div className={"home__hero-section darkBg"}>
       <div style={{ textAlign: "center" }}>
-        <div className="container">
+        <div className="container-dev">
           <div className="wrap-front">
             <div className="dev-front">
               <img className="logo-back" src="image/logo/react.png" alt="" />

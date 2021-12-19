@@ -1,6 +1,9 @@
-.container {
+.container-dev {
   display: flex;
-
+  align-items: center;
+  /* margin-left:400px; */
+  padding-left:18vw;
+  padding-right: auto;
   /* margin-bottom: 250px; */
   /* background-color: aqua; */
 }
@@ -9,12 +12,15 @@
   position: absolute;
   margin-bottom: 350px;
   margin-left: 40px;
+   /* background-color: aqua; */
 }
 .dev-front {
   display: flex;
   position: absolute;
   margin-bottom: 350px;
   margin-left: 145px;
+  
+  
 }
 .logo-front {
   height: 45px;
@@ -37,6 +43,7 @@
 .wrapper {
   display: flex;
   padding: 6px;
+   background-color: aqua;
 }
 
 .wrap-front {
@@ -62,10 +69,12 @@
   display: flex;
   align-items: center;
 }
-@media screen and (max-width: 1400px) {
-  .container {
+
+@media screen and (max-width: 1700px) {
+  .container-dev {
     display: inline-block;
     /* display: block;         */
+    margin-right:250px;
     justify-content: center;
     align-items: center;
     /* margin-bottom: 250px; */
@@ -99,11 +108,12 @@
     align-items: center;
   }
 }
-@media screen and (max-width: 770px) {
-  .container {
+@media screen and (max-width: 900px) {
+  .container-dev {
     display: inline-block;
     /* display: block;         */
     justify-content: center;
+    margin-left: 85px;
     align-items: center;
     /* margin-bottom: 250px; */
     /* background-color: rgb(255, 0, 149); */

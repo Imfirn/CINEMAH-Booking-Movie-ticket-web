@@ -57,26 +57,7 @@ function Navbar() {
                 <Link to='/dev' className='nav-links'onClick={closeMobileMenu}>
                     DEV
                 </Link>
-            </li>
-            <li className='nav-btn'>
-                {button ?
-                    (
-                        <Link to='/Log-out'className='btn-link'>
-                            <Button buttonStyle='btn--outline'>
-                                Log out
-                            </Button>
-                        </Link>
-                    ):
-                    (
-                        <Link to='/Log-out' className='btn-link'onClick={closeMobileMenu}>
-                            <Button buttonStyle='btn--outline'
-                            buttonSize='btn--moblie'>                                
-                                Log out
-                            </Button>
-                        </Link>
-                    )
-                }
-            </li>
+            </li>           
           </ul>
         </div>
       </div>
