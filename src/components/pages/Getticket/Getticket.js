@@ -72,18 +72,15 @@ function Getticket({ data }) {
                 </h3>
               ))}
             </div>
-            <div className="select-p">
-              <p>Price</p>
-              <h3 className="info-seat">{price}</h3>
-            </div>
+          
           </div>
 
           <div className="info-down">
             <div className="select-t">
               <p>Date</p>
-              {selectseat.map((i) => (
+              
                 <h3 className="info-seat">99.99</h3>
-              ))}
+             
             </div>
             <div className="select-p">
               <p>Time</p>

@@ -7,6 +7,7 @@ import MovieimgNow from "./movieDataNow";
 
 function Nowsection() {
   const [nameMovie, setNameMovie] = useState(null);
+  const [actionMovie, setActionMovie] = useState(null);
   const timeout = async (ms) => {
     return new Promise((res) => setTimeout(res, ms));
   };
@@ -15,7 +16,15 @@ function Nowsection() {
       setNameMovie(res.data);
     });
   }, []);
-  if (!nameMovie) return "error";
+
+  // if (!nameMovie) return "error";
+
+  useEffect(() => {
+    axios.get("http://127.0.0.1:8000/api/ActionMovie/").then((res) => {
+      setActionMovie(res.data);
+    });
+  }, []);
+  if ((!actionMovie) ||(!nameMovie))  return "error";
 
   const breakPoint = [
     { width: 400, itemsToShow: 1 },
@@ -51,7 +60,24 @@ function Nowsection() {
           <Carousel breakPoints={breakPoint} pagination={false}>
             {MovieimgNow &&
               MovieimgNow.map((item) => (
-                <Card number={item.nm} img={item.img} time={item.time} />
+                <Card number={item.nm} img={item.img} time={item.time} btn="True"  />
+              ))}
+          </Carousel>
+        </div>
+      </div>
+      <div className="nextMov">
+        <div className="curr">
+          <h1 className="txt1">Action Movie</h1>
+        
+          <Carousel breakPoints={breakPoint} pagination={false}>
+            {actionMovie &&
+              actionMovie.map((item) => (
+                <Card
+                  number={item.Name}
+                  time={item.Time}
+                  img={item.Date}
+                  btn="True"
+                />
               ))}
           </Carousel>
         </div>
