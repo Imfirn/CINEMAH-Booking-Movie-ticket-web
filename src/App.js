@@ -9,6 +9,7 @@ import axios from "axios";
 import DevPage from './components/pages/Dev/DevPage';
 import Info from './components/pages/Information/Info';
 import SelectedTime from './components/SelectedTime';
+import Payment from './components/pages/Payment/Payment';
 
 function App() {
   const [nameMovie, setNameMovie] = useState(null);
@@ -32,7 +33,7 @@ function App() {
         <Route path="/movie/:id" element={<Info data={nameMovie} />} />
         {/* <Route path="/selectdate/:id" element={<SelectedTime data={nameMovie}/>}/> */}
         <Route path="/dev" element={<DevPage />} />    
-        <Route path="/purchase/:id/:tm/:da/:price"/>
+        <Route path="/purchase/:id/:tm/:da/:price" element={<Payment/>}/>
       </Routes>      
     </Router>
     </div>
