@@ -43,7 +43,8 @@
 .wrapper {
   display: flex;
   padding: 6px;
-   background-color: aqua;
+   /* background-color: aqua;
+    */
 }
 
 .wrap-front {

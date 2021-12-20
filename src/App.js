@@ -8,6 +8,7 @@ import Movie from './components/pages/AllMovie/Movie';
 import axios from "axios";
 import DevPage from './components/pages/Dev/DevPage';
 import Info from './components/pages/Information/Info';
+import SelectedTime from './components/SelectedTime';
 
 function App() {
   const [nameMovie, setNameMovie] = useState(null);
@@ -15,7 +16,7 @@ function App() {
     return new Promise((res) => setTimeout(res, ms));
   };
   useEffect(() => {
-    axios.get("http://127.0.0.1:8000/api/MovieLH/").then((res) => {
+    axios.get("http://127.0.0.1:8000/api/Detail/").then((res) => {
       setNameMovie(res.data);
     });
   }, []);
@@ -29,7 +30,9 @@ function App() {
         <Route path="/Buyticket/:id" element={<Buyticket data={nameMovie}/>}/>  
         <Route path="/movie" element={<Movie />} />
         <Route path="/movie/:id" element={<Info data={nameMovie} />} />
+        {/* <Route path="/selectdate/:id" element={<SelectedTime data={nameMovie}/>}/> */}
         <Route path="/dev" element={<DevPage />} />    
+        <Route path="/purchase/:id/:tm/:da/:price"/>
       </Routes>      
     </Router>
     </div>
