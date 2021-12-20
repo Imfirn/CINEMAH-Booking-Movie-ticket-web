@@ -3,12 +3,14 @@ import "./../../../App.css";
 import { useParams } from "react-router-dom";
 import { VscPass } from "react-icons/vsc"; //BsCheckCircle
 import "./Getticket.css";
+import { Link } from "react-router-dom";
+import { Button } from "../../Button";
 function Getticket({ data }) {
   const { id, da, tm, seat, price } = useParams();
   var selectseat = seat.split(",");
   return (
-    <div>
-      <div>
+    <div className="wrap-ticket">
+      <div className="all">
         <div className="e-ticket">
           <div className="img-m">
             {data
@@ -98,7 +100,7 @@ function Getticket({ data }) {
             <p>Thank you for you Purchase </p>
           </div>
           <div className="txt-2">
-            <p style={{color: "#FFFF"}}>Time stamp </p>
+            
             <hr
               style={{
                 color: "#FFFF",
@@ -107,6 +109,11 @@ function Getticket({ data }) {
                 borderColor: "#FFFF",
               }}
             />
+          </div>
+          <div className="btn">
+          <Link to={"/"}  style={{ textDecoration: 'none' }} >
+             <Button className="last-btn" buttonStyle="btn--ticket">Back to HOME</Button>
+            </Link>
           </div>
         </div>
       </div>

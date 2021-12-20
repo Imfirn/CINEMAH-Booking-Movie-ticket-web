@@ -83,9 +83,7 @@ function Payment({ submitForm }) {
            <button className="form-input-btn" type="submit">
             Purchase {price} THB
           </button>
-          <Link to={`/getticket/${id}`}  style={{ textDecoration: 'none' }} >
-            
-          </Link>
+          
         </div>
       </form>
     </div>

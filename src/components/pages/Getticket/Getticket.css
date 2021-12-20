@@ -1,13 +1,30 @@
 .movie-img{
     width: 275px;
 }
+.wrap-ticket{
+    margin-top: 50px;
+    text-align: center;
+   display: flex;
+   flex-flow: column;
+   align-items: center;
+ 
+}
 .e-ticket{
     width: 275px;
     background-color: white;
     border-radius: 5px;
+    margin-right:40px ;
+}
+.all{
+    display: flex;
 }
 .txt-1{
     margin-top: 10px;
+    color: white;
+    text-align: center;
+}
+.txt-2{
+    margin-top: 280px;
     color: white;
     text-align: center;
 }
@@ -63,4 +80,9 @@
 }
 .info-up{
     display: flex;
+}
+
+.btn{
+    text-align: center;
+    margin-top: 13px;
 }
