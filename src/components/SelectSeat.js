@@ -103,7 +103,7 @@ export default function SelectSeat({ data,tm,da }) {
       </div>
       <ShowCase />
       <div className="btn-con" >
-      {selectedSeats.length!=0 ? <Link to={`/purchase/${id}/${tm}/${da}/${price}`} className="btn">
+      {selectedSeats.length!=0 ? <Link to={`/purchase/${id}/${tm}/${da}/${price}/${selectedSeats}`} className="btn">
       <Button buttonStyle="btn--ticket">continuous</Button>
       </Link>:null}
       

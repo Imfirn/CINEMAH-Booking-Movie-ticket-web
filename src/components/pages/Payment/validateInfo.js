@@ -1,11 +1,7 @@
 export default function validateInfo(values) {
   let errors = {};
 
-//   if (!values.username.trim()) {
-//     errors.username = "Username required";
-//   }
 
-//   Email
   if (!values.mmyy) {
     errors.mmyy = "MM/YY required";
   } else if (!/^[0-9]+\/[0-9]/i.test(values.mmyy)) {

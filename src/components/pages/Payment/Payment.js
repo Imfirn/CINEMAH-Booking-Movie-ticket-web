@@ -3,12 +3,10 @@ import { useParams } from "react-router-dom";
 import validate from "./validateInfo";
 import useForm from "./useForm";
 import "./Payment.css";
+import { Link } from "react-router-dom";
 function Payment({ submitForm }) {
-  const { price } = useParams();
-  const { handleChange, values, handleSubmit, errors } = useForm(
-    submitForm,
-    validate
-  );
+  const { tm,da,id,price } = useParams();
+  const { handleChange, values, handleSubmit, errors } = useForm(submitForm,validate);
   return (
     <div className="form-content-left">
       <form className="form" onSubmit={handleSubmit}>
@@ -81,10 +79,13 @@ function Payment({ submitForm }) {
 
             {/* {errors.password2 && <p>{errors.password2}</p>} */}
           </div>
-          <button className="form-input-btn" type="submit">
+         
+           <button className="form-input-btn" type="submit">
             Purchase {price} THB
           </button>
-          
+          <Link to={`/getticket/${id}`}  style={{ textDecoration: 'none' }} >
+            
+          </Link>
         </div>
       </form>
     </div>

@@ -1,0 +1,66 @@
+.movie-img{
+    width: 275px;
+}
+.e-ticket{
+    width: 275px;
+    background-color: white;
+    border-radius: 5px;
+}
+.txt-1{
+    margin-top: 10px;
+    color: white;
+    text-align: center;
+}
+.process{
+    width: 275px;
+   
+}
+.icon{
+    color: rgb(53, 255, 80);
+    text-align: center;
+}
+.mov-nm{
+    text-align: center;
+    background: linear-gradient(
+        0deg,
+        rgb(222, 63, 228) 0%,
+        rgb(131, 62, 255) 60%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+.info-seat{
+    /* color: blueviolet; */
+    background: linear-gradient(
+    0deg,
+    rgb(222, 63, 228) 0%,
+    rgb(131, 62, 255) 60%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-left: 10px;
+}
+.select-p ,.select-t{
+    display: flex;
+    
+}
+.select-t{
+    margin-left: 20px;
+}
+.select-p{
+    margin-left:80px;
+}
+.info-down{
+    display: flex;
+}
+.info-down .select-t{
+    display:flex;
+}
+.info-down .select-p{
+    display:flex;
+    margin-left:60px;
+}
+.info-up{
+    display: flex;
+}
