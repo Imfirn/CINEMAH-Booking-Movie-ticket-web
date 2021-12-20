@@ -10,6 +10,41 @@
     /* justify-content: space-around;  */
     
 }
+.Wrap-type{
+    display: flex;
+}
+.select-type{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    /* background-color: aqua; */
+    height: 30px;
+    margin-top: 26px;
+    
+}
+.select-month{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    /* background-color: aqua; */
+    height: 30px;
+    margin-top: 26px;
+    margin-left: 50px;
+
+}
+.search-month{
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 30px;
+}
+.icLH{
+    position:absolute;
+    /* background-color: aqua; */
+}
+.sortLH{
+    margin-left: 10px;
+    height: 30px;
+}
 .ser{
     background-color: transparent;
     width: 355px;
