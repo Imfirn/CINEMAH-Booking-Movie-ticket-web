@@ -140,6 +140,7 @@ function Movie() {
                 <Grid
                   name={item.Name}
                   img={`/image/nowPic/Movie/${item.Name}/${item.Date}_1.jpg`}
+                  time={item.FullDate}
                 />
               </div>
             ))}

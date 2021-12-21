@@ -14,6 +14,7 @@ const Card =({number: name,img,time,btn=false,rD}) =>
     <div className="movieTime">
         {time} min
     </div> 
+    
     <div className="ticket">
     {btn ?(
     <Link to={`/Buyticket/${name}`} className='buy-link'>
