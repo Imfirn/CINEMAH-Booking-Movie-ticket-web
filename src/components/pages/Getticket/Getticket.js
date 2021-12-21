@@ -6,6 +6,7 @@ import "./Getticket.css";
 import { Link } from "react-router-dom";
 import { Button } from "../../Button";
 import axios from "axios";
+import Bar from "../../../assets/barcode 1.png";
 function Getticket({ data }) {
   const { id, da, tm, seat, price } = useParams();
   const timeout = async (ms) => {
@@ -105,6 +106,7 @@ function Getticket({ data }) {
               <h3 className="info-seat">{tm}</h3>
             </div>
           </div>
+          <img src={Bar} alt=""/>
         </div>
         <div className="process">
           <div className="icon">
@@ -113,6 +115,7 @@ function Getticket({ data }) {
           </div>
           <div className="txt_1">
             <p>Thank you for you Purchase </p>
+            <p>"Please capture your ticket for confirm your Booking "</p>
           </div>
           <div className="txt-2">
             <hr

@@ -73,7 +73,7 @@ function SelectedTime({ data, name, Date }) {
     { width: 1500, itemsToShow: 2 },
   ];
   return (
-    <div>
+    <div className="mix">
          <h1 className="txt1"> Select Showtime</h1>
         <div className="line"></div>
       {data

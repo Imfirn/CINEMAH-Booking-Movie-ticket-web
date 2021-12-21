@@ -62,6 +62,7 @@
 .timeData{
     margin-left: 10px;
 }
+
 @media screen and (max-width:991px) {
     .container{
         padding-right: 30px;
