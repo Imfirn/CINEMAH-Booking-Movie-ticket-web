@@ -14,6 +14,7 @@ import Getticket from './components/pages/Getticket/Getticket';
 import Purchase from './components/pages/Payment/Purchase';
 
 
+
 function App() {
   const [nameMovie, setNameMovie] = useState(null);
   const timeout = async (ms) => {
@@ -22,6 +23,7 @@ function App() {
   useEffect(() => {
     axios.get("http://127.0.0.1:8000/api/Detail/").then((res) => {
       setNameMovie(res.data);
+      
     });
   }, []);
   if (!nameMovie) return "error";
@@ -30,7 +32,7 @@ function App() {
     <Router>
       <Navbar />
       <Routes>      
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home />} />        
         <Route path="/Buyticket/:id" element={<Buyticket data={nameMovie}/>}/>  
         <Route path="/movie" element={<Movie />} />
         <Route path="/movie/:id" element={<Info data={nameMovie} />} />

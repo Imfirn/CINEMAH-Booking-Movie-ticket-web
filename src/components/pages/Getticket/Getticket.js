@@ -5,8 +5,28 @@ import { VscPass } from "react-icons/vsc"; //BsCheckCircle
 import "./Getticket.css";
 import { Link } from "react-router-dom";
 import { Button } from "../../Button";
+import axios from "axios";
 function Getticket({ data }) {
   const { id, da, tm, seat, price } = useParams();
+  const timeout = async (ms) => {
+    return new Promise((res) => setTimeout(res, ms));
+  };
+  const pushData = async () => {
+    let formField = new FormData();
+
+    formField.append("Name", id);
+    formField.append("Seat", seat);
+    formField.append("Date", da);
+
+    await axios({
+      method: "POST",
+      url: "http://127.0.0.1:8000/api/History",
+      data: formField,
+    }).then((response) => {
+      console.log(response.data);
+    });
+  };
+
   var selectseat = seat.split(",");
   return (
     <div className="wrap-ticket">
@@ -72,19 +92,17 @@ function Getticket({ data }) {
                 </h3>
               ))}
             </div>
-          
           </div>
 
           <div className="info-down">
             <div className="select-t">
               <p>Date</p>
-              
-                <h3 className="info-seat">99.99</h3>
-             
+
+              <h3 className="info-seat">{da}.2021</h3>
             </div>
             <div className="select-p">
               <p>Time</p>
-              <h3 className="info-seat">{price}</h3>
+              <h3 className="info-seat">{tm}</h3>
             </div>
           </div>
         </div>
@@ -93,11 +111,10 @@ function Getticket({ data }) {
             <VscPass size="100px" />
             <h2>Success</h2>
           </div>
-          <div className="txt-1">
+          <div className="txt_1">
             <p>Thank you for you Purchase </p>
           </div>
           <div className="txt-2">
-            
             <hr
               style={{
                 color: "#FFFF",
@@ -108,8 +125,19 @@ function Getticket({ data }) {
             />
           </div>
           <div className="btn">
-          <Link to={"/"}  style={{ textDecoration: 'none' }} >
-             <Button className="last-btn" buttonStyle="btn--ticket">Back to HOME</Button>
+            <Link to={"/"} style={{ textDecoration: "none" }}>
+              <Button
+                className="last-btn"
+                buttonStyle="btn--ticket"
+
+                onClick={
+                  pushData                         
+                    
+                  
+                }
+              >
+                Back to HOME
+              </Button>
             </Link>
           </div>
         </div>

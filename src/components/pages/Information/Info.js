@@ -57,7 +57,7 @@ function Info({ data }) {
                       </div>
                     </div>
                   </div>
-                  <div className="information">
+                  <div className="information-1">
                     <h3 className="info">INFORMATIONS</h3>
                     <p>{item.Description}</p>
                   </div>

@@ -1,74 +1,99 @@
-.wrap-date{
-    
-    /* color: rgb(146, 0, 0);
+.wrap-date {
+  /* color: rgb(146, 0, 0);
     background-color: aqua; */
-    display: block;
-    width: 480px;
-    /* margin-left: 700px; */
-    
+  display: block;
+  width: 480px;
+  /* margin-left: 700px; */
 }
-.day{
-    margin-top: 20px;
-    margin-bottom: 50px;
-    border: 1px solid white;
-    border-radius: 5px;
+.day {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  border: 1px solid white;
+  border-radius: 5px;
 }
-.clock{
-    border-radius: 5px;
+.clock {
+  border-radius: 5px;
 
-    border: 1px solid white;
-
+  border: 1px solid white;
 }
-.selected{
-    /* background-color: brown; */
-    text-align: center;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
+.selected {
+  /* background-color: brown; */
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 }
 /* p{
     color: aqua;
 } */
-.test{
-    /* display: flex; */
-    /* height: 100vh;
+.test {
+  /* display: flex; */
+  /* height: 100vh;
     justify-content: center;
     text-align: center; */
-    /* flex-flow: row wrap; */
-    align-items: center;
-    /* background-color: aqua; */
+  /* flex-flow: row wrap; */
+  align-items: center;
+  /* background-color: aqua; */
 }
-.select{
-    
-    width: 60px;
-    height: 60px;
-    margin: 10px;
-    border: 1px solid white;
-    border-radius: 3px;
-    transition: background-color 0.1s ease-in-out;
+.select {
+  width: 60px;
+  height: 60px;
+  margin: 10px;
+  border: 1px solid white;
+  border-radius: 3px;
+  transition: background-color 0.1s ease-in-out;
 }
-.date{
-    margin-top: 17px;
-    color: white;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
+.date {
+  margin-top: 17px;
+  color: white;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 }
-.inactive{
-    background-color: transparent;
+.inactive {
+  background-color: transparent;
+}
+.active {
+  /* background-color: rgb(255, 0, 200); */
+  background: linear-gradient(90deg, #581bff 24.58%, #c14ff1 100%);
+}
+.fe {
+  height: 400px;
+  width: 300px;
+  background-color: aqua;
+}
+.fe2 {
+  background-color: rgb(238, 255, 0);
+}
+.line-s {
+  position:relative;  
+  width: 95px;
+  height: 4px;
+  top: 23px;
+  left: 15px;
+  z-index: 999; 
 
+  background: linear-gradient(90deg, #833eff 24.58%, #c370e8 100%);
 }
-.active{
-    background-color: rgb(255, 0, 200);
-
+.st p{
+    position:relative;  
+    top:27px;
+    right: 176px;
+    z-index: 1000; 
 }
-.fe{
-    height: 400px;
-    width: 300px;
-    background-color: aqua;
-   
-}
-.fe2{
-    background-color: rgb(238, 255, 0);
+.sd p{
     
+        position:relative;  
+        top:27px;
+        right: 176px;
+        z-index: 1000; 
+    
+}
+.sd{
+    position:relative; 
+    bottom: 21px;
+    z-index: 500;
+}
+.txt-1{
+    padding-left: 4vw;
 }

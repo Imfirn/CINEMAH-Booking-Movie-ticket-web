@@ -8,11 +8,21 @@
 
 .txt1{
     color: aliceblue;
-    padding-bottom: 3vh;
+    /* padding-bottom: 3vh; */
     padding-left: 4vw;
+    /* background-color: aqua; */
 }
 
+.line{
+    /* position: absolute; */
 
+width: 205px;
+height: 7px;
+margin-left: 105px;
+background-color: aqua;
+margin-bottom: 20px;
+background: linear-gradient(90deg, #833EFF 24.58%, #C370E8 100%);
+}
 
 /* square buttons */
 .rec.rec-arrow {

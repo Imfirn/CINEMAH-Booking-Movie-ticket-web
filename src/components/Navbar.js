@@ -37,6 +37,7 @@ function Navbar() {
           <div className="menu-icon" onClick={handleClick}>
             {click ? <FaTimes /> : <FaBars />}
           </div>
+          <div className="nav">
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
                 <Link to='/' className='nav-links'onClick={closeMobileMenu}>
@@ -48,17 +49,14 @@ function Navbar() {
                     MOVIE
                 </Link>
             </li>
-            <li className="nav-item">
-                <Link to='/history' className='nav-links'onClick={closeMobileMenu}>
-                    HISTORY
-                </Link>
-            </li>
+            
             <li className="nav-item">
                 <Link to='/dev' className='nav-links'onClick={closeMobileMenu}>
                     DEV
                 </Link>
             </li>           
           </ul>
+          </div>
         </div>
       </div>
       </IconContext.Provider>

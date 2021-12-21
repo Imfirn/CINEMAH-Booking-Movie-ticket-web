@@ -10,7 +10,7 @@ import SelectedTime from "../../SelectedTime";
 
 const Buyticket = ({ data }) => {
   const { id } = useParams();
- 
+  
   return (
     <>
       <div className={"home__hero-section darkBg"}>
@@ -69,7 +69,7 @@ const Buyticket = ({ data }) => {
                     <button className="btn-ticket">Get </button>
                   </Link> */}
 
-                  <SelectedTime data={data} name={id}/>
+                  <SelectedTime data={data} name={id} Date={item.Day}/>
                 </>
               ))}
           </div>

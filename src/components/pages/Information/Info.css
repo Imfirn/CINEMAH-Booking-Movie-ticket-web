@@ -65,9 +65,12 @@
 
     margin-left: 30px;
 }
-.information{
+.information-1{
     margin-left: 30px;
     margin-bottom: 40px;
+    /* background-color: aquamarine; */
+    max-width: 70%; 
+
 }
 h3{
     margin-bottom: 20px;

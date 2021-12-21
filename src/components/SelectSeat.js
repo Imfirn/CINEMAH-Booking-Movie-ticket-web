@@ -13,8 +13,9 @@ export default function SelectSeat({ data,tm,da }) {
   return (
     
     <div className="Buy-ticket">
-        
+      
       <div className="main">
+        
       {data
             .filter((item) => item.Name == id)
             .map((item, index) => (
@@ -33,23 +34,15 @@ export default function SelectSeat({ data,tm,da }) {
               <ul>
                 <li className="detail_1">{item.Name}</li>
                 <li className="detail_1">
-                  {/* {item.time
-                    .filter((i) => i == tm)
-                    .map((i) => (
-                      <li>{i}</li>
-                    ))}
-                  {item.day
-                    .filter((i) => i == da)
-                    .map((i) => (
-                      <li>{i}</li>
-                    ))} */}
+                 
+                   <li> Date: {da}</li><li>Time: {tm}</li>
                 </li>
                 <li className="detail_1">
                   {/* {selectedSeats.length<=5 ? null:"you"} */}
                   selected seat
                   <div className="row">
                     {selectedSeats.map((i) => (
-                      <p className="info-seat">
+                      <p className="info-of-seat">
                         {i <= 8
                           ? "H"
                           : i <= 16
@@ -104,7 +97,7 @@ export default function SelectSeat({ data,tm,da }) {
       <ShowCase />
       <div className="btn-con" >
       {selectedSeats.length!=0 ? <Link to={`/purchase/${id}/${tm}/${da}/${price}/${selectedSeats}`} className="btn">
-      <Button buttonStyle="btn--ticket">continuous</Button>
+      <Button buttonStyle="btn--ticket">continue</Button>
       </Link>:null}
       
       </div>

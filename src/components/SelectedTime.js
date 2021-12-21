@@ -9,23 +9,41 @@ import { Link } from "react-router-dom";
 import SelectSeat from "./SelectSeat";
 // import Movie from "./Movie";
 
-function SelectedTime({ data }) {
+function SelectedTime({ data, name, Date }) {
   const { id } = useParams();
+  var dateSelect = Date.split(",");
   var x,
     y,
     check,
     check1 = false;
+  var showtime =["12.00","17.30"];
   const [day, setDay] = useState([null]);
   const [time, setTime] = useState([null]);
   const [showResults, setShowResults] = React.useState(false);
   const onClick = () => setShowResults(true);
   const [appState, changeState] = useState({
     ActiveObject: null,
-    object: [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }],
+    object: [
+      { id: 1 },
+      { id: 2 },
+      { id: 3 },
+      { id: 4 },
+      { id: 5 },
+      { id: 6 },
+      { id: 7 },
+    ],
   });
   const [appState_2, changeState_2] = useState({
     ActiveObject: null,
-    object: [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }],
+    object: [
+      { id: 1 },
+      { id: 2 },
+      { id: 3 },
+      { id: 4 },
+      { id: 5 },
+      { id: 6 },
+      { id: 7 },
+    ],
   });
   function toggleActive_2(index) {
     changeState_2({ ...appState_2, ActiveObject: appState_2.object[index] });
@@ -56,78 +74,85 @@ function SelectedTime({ data }) {
   ];
   return (
     <div>
+         <h1 className="txt1"> Select Showtime</h1>
+        <div className="line"></div>
       {data
         .filter((item) => item.Name == id)
         .map((item, index) => (
           <div className="selected">
+         
             <div className="wrap-date">
+              <div className="st">
+                <p>Select Day</p>
+                <div className="line-s"></div>
+              </div>
               <div className="day">
                 <Carousel breakPoints={breakPoint} pagination={false}>
                   {/* {item.day.map((j, k) => ( */}
+                    {dateSelect.map((element,index) => (
                   <div
-                    key={2}
-                    className={toggleActiveStyles(2)}
+                    // key={index}
+                    className={toggleActiveStyles(index)}
                     onClick={() => {
-                      toggleActive(2);
+                      toggleActive(index);
                       setDay(
                         day.map(() => {
-                          return `${item.Name}`;
+                          return `${element}`;
                         })
                       );
                     }}
                   >
-                    <p className="date"> {item.Name} </p>
-                  </div>
-                  <h1>555</h1>
-                  <h1>555</h1>
+                      <p className="date"> {element} </p>
+                  </div>                
+                   
+                  ))}
+                  {/* <h1>555</h1>
+                  <h1>555</h1> */}
                 </Carousel>
               </div>
+              <div className="sd">
+                <p>Select time</p>
+                <div className="line-s"></div>
+              </div>
               <div className="clock">
-            <Carousel breakPoints={breakPoint} pagination={false}>
-              {/* {item.time.map((i, q) => ( */}
-                <div>
-                
+              
+                <Carousel breakPoints={breakPoint} pagination={false}>
+                  {/* {item.time.map((i, q) => ( */}
+                    {showtime.map((element,index) => (
                   <div
-                    key={2}
-                    className={toggleActiveStyles_2(2)}
+                    // key={index}
+                    className={toggleActiveStyles_2(index)}
                     onClick={() => {
-                      toggleActive_2(2);
+                      toggleActive_2(index);
                       setTime(
                         time.map(() => {
-                          return `${item.Name}`;
+                          return `${element}`;
                         })
                       );
                     }}
                   >
-                    {" "}
-                    <p className="date"> {item.Name} </p>
-                  </div>
-                  {/* </Link> */}
-                </div>
-             <>testt</>
-             <>testt</>
-
-            </Carousel>
-            </div>                  
-
-
-
-
+                      <p className="date"> {element} </p>
+                  </div>                
+                   
+                  ))}
+                </Carousel>
+              </div>
+              
             </div>
           </div>
         ))}
-        {`${time}` != 0 ? (x = true) : (x = false)}
-        {`${day}` != 0 ? (y = true) : (y = false)}
-       <h1> {`${time}` != 0 ? "(x = true)" : "(x = false)"}</h1>
-       <h1> {`${day}` != 0 ? "(y = true)" : "(y = false)"}</h1>
-       {x != true ? (
-        (check = false)
-      ) : x == y ? (
-        // <Link to={`/ticket/${id}/${time}/${day}`} className="btn">
-          // <Button buttonStyle="btn--ticket" onClick={check1=true} >continuous</Button>
-        check1=true
-      ) : null}
-      {check1 ? <SelectSeat data={data} tm={time} da={day}/>:null}
+      {`${time}` != 0 ? (x = true) : (x = false)}
+      {`${day}` != 0 ? (y = true) : (y = false)}
+     
+      {x != true
+        ? (check = false)
+        : x == y
+        ? 
+          (check1 = true)
+        : null}
+         <h1 className="txt1"> Select Seat</h1>
+        <div className="line"></div>
+      {check1 ? <SelectSeat data={data} tm={time} da={day} /> : null}
     </div>
   );
 }

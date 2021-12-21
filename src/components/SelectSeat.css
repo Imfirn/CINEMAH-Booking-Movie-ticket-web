@@ -201,9 +201,15 @@
  .info{
      color: white;
  }
- .info-seat {
+ .info-of-seat {
    
-   color: white;
+  background: linear-gradient(
+    0deg,
+    rgb(251, 140, 255) 0%,
+    rgb(206, 180, 255) 60%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
  }
  .row{
    display: flex;
@@ -212,4 +218,3 @@
  .info .total {
    color: #7bc47f;
  }
- 
